@@ -6,7 +6,7 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
 <head>
 
   <!-- Meta tags & title /-->
@@ -30,7 +30,7 @@
   
   
   <script src="js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
-  <script src="js/validation.js"></script>  <!-- Validações /-->
+  <script src="js/validation.js"></script>  <!-- Modernizr /-->
   
   
 </head>
@@ -98,7 +98,7 @@
 						} else {
 							%>
 						<% String sobrenome = "";
-						if (oUsuario.getSobrenome() != null || !oUsuario.getSobrenome().equals("")) {
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
 							sobrenome = oUsuario.getSobrenome();
 						} %>	
 						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + sobrenome %></a></li>
@@ -157,7 +157,7 @@
 							<span id="senha" class="erro">Campo obrigatório. *Minimo de 4 caracteres</span>
 						</div>
 						<div>
-							<input type="password" placeholder="confirmar senha" name="confPass" tabindex="4" />
+							<input type="password" placeholder="confirmar senha" name="conf_senha" tabindex="4" />
 							<span id="conf_senha" class="erro">Campo obrigatório</span>
 							<span id="valida_senha" class="erro">A senha e a confirmação precisam ser iguais.</span>
 						</div>
