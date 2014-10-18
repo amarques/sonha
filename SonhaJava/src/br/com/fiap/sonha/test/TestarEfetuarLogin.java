@@ -25,7 +25,6 @@ public class TestarEfetuarLogin {
 			else {
 				usuario = usuarioBO.selecionarUsuario(cdUsuario);
 				usuarioBO.fecharConexao();
-				System.out.println("Código do Usuário: " + usuario.getCdUsuario());
 				System.out.println("Nome: " + usuario.getNome() + " " + usuario.getSobrenome());
 			}
 		} catch (ClassNotFoundException e) {

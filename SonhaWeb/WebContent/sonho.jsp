@@ -1,4 +1,5 @@
 <%@page import="br.com.fiap.sonha.beans.UsuarioBEANS"%>
+<%@page import="br.com.fiap.sonha.beans.SonhoBEANS"%>
 <%@page import="br.com.fiap.sonha.bo.UsuarioBO"%>
 
 <!doctype html>
@@ -67,7 +68,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+						<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = oUsuario.getSobrenome();
+						} %>	
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
@@ -101,7 +106,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+						<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>	
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
@@ -152,12 +161,14 @@
       <div class="twelve columns centered">
       
       	<div class="cadSonho">
-				<form name="VerSonho" id="VerSonho" action="feedsonhos.jsp">
+				<form action="">
 					<div class="cadBox cadBoxL fLeft infoSonho">
-						<h4>Quero conhecer Paris!</h4>
-						<p>Fazem alguns anos que gostaria de conhecer este lugar maravilhoso, aceito recomendações, rotas, etc.</p>
-						<h5>Tags</h5>
-						<p class="tags">#videogame #xbox1 #xbox #jogo</p>
+						<h4><%= request.getAttribute("tituloSonho") %></h4>
+						<p><%= request.getAttribute("descricaoSonho") %></p>
+						<p>Data de Criação: <%= request.getAttribute("dataCriacao") %></p>
+						<p><%= request.getAttribute("sonhoRealizado") %></p>
+						<h5>Categoria</h5>
+						<p class="tags"><%= request.getAttribute("categoria") %></p>
 					</div>
 					<div class="cadBox cadBoxR fRight">
 						<img src="img/no-image.jpg"/>
@@ -166,7 +177,6 @@
 							<p><span>82</span> pessoas curtiram</p>
 						</div>
 					</div>
-                    <input type="submit" class="fLeft  button2 fade3" value="Ir ao Feed de Sonhos" tabindex="14"/>
                 </form>
 			</div>
         

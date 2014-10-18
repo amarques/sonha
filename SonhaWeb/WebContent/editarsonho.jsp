@@ -12,7 +12,7 @@
   <!-- Meta tags & title /-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Sonha - Sonho</title>
+  <title>Sonha - Cadastro</title>
   <meta name="description" content="." />
   <meta name="keywords" content="" />
   <meta name="author" content="humans.txt">

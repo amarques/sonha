@@ -54,7 +54,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+						<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
@@ -123,7 +127,7 @@
       
       	<!-- Logo --> 
       
-      	<div class="fade1 logo"><img src="img/logo.png" alt="Logo"></div>
+      	<div class="fade1 logo"><a href="index.jsp"><img src="img/logo.png" alt="Logo"></a></div>
       	
       	<!-- Title --> 
         <h2 class="fade2">Onde seus sonhos podem colaborativamente
@@ -196,7 +200,7 @@
                     <li>
                     <a href="#set-9" class="hi-icon hi-icon-mail">Mail</a>
                     <div class="clear"></div>
-                    <h4>Compartilhe</h4>
+                    <h4>COMPARTILHE</h4>
                     <p>Quanto mais pessoas alcançadas, mais chances você tem de realizar os sonhos</p>
                     </li>
                 
@@ -228,7 +232,7 @@
 						
 			<!-- Content --> 
 			
-			<p>Estamos preparando uma surpresa para você, em breve o <strong>Sonha</strong> terá uma aplicação voltada a realização de sonhos, compra de produtos relacionados, dicas de viagens e muito mais! Fique por dentro das novidades.</p>
+			<p>Estamos preparando uma surpresa para você, em breve o <strong>Sonha</strong> terá uma aplicação totalmente alinhada a realização de sonhos, compra de produtos relacionados, dicas de viagens e muito mais! Fique por dentro das novidades.</p>
 			
 			
 			<div class="download-button" style="padding-top:30px;">
@@ -305,9 +309,9 @@
 								
 									<li>
 										<h4 class="testtitle">Anderson Marques</h4>  
-										<div class="testsub">Lí­der de Projetos</div> 
+										<div class="testsub">Líer de Projetos</div> 
 										<div class="testtextblock">							
-											<p>Sonhador e apaixonado por tecnologia e barrigudo</p>
+											<p>Sonhador, apaixonado por tecnologia e barrigudo</p>
 										</div>
 									</li>
 									
@@ -331,7 +335,7 @@
 										<h4 class="testtitle">Vanessa Vidal</h4>
 										<div class="testsub">Analisa de Suporte</div>
 										<div class="testtextblock">	
-											<p>Sonhadora habilidosa nos mistérios do Front End e amante frenética de Rammstein series e filmes (nesta ordem)</p>
+											<p>Sonhadora habilidosa nos mistérios do Front End e amante frenética de Rammstein, series e filmes (nesta ordem)</p>
 										</div>
 									</li>
 
@@ -339,7 +343,7 @@
 										<h4 class="testtitle">Davi Couto</h4>  	
 										<div class="testsub">Consutor EAD</div>
 										<div class="testtextblock">
-											<p>Sonhador o Lion do EAD e especialista de negócios</p>
+											<p>Sonhador, o Lion do EAD e especialista de negócios</p>
 										</div>
 									</li>
 									
@@ -393,7 +397,7 @@
 		
 		<div class="seven columns pull_left">
 		
-			<p>© 2014<br>Made with <img src="img/withlove.png" alt="With Love">&nbsp;&nbsp;in FIAP</p>
+			<p>© 2014<br>Made with <img src="img/withlove.png" alt="With Love"> in FIAP</p>
 
 		</div>
 

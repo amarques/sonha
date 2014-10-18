@@ -16,26 +16,25 @@ public class TestarAdicionarUsuario {
 			UsuarioBO bo = new UsuarioBO();
 			
 			String nome = JOptionPane.showInputDialog("Digite seu Nome");
-			String sobrenome = JOptionPane.showInputDialog("Digite seu Sobrenome");
+			//String sobrenome = JOptionPane.showInputDialog("Digite seu Sobrenome");
 			String email = JOptionPane.showInputDialog("Digite seu Email");
 			String password = JOptionPane.showInputDialog("Digite sua Senha");
-			String dtNascimento = JOptionPane.showInputDialog("Digite sua Data de Nascimento");
+			//String dtNascimento = JOptionPane.showInputDialog("Digite sua Data de Nascimento");
 			
 			UsuarioBEANS usuario = new UsuarioBEANS();
 			usuario.setNome(nome);
-			usuario.setSobrenome(sobrenome);
+			//usuario.setSobrenome(sobrenome);
 			usuario.setEmail(email);
 			usuario.setPassword(password);
-			usuario.setDtNascimento(dtNascimento);
-			usuario.setDtEntrada("");
+			//usuario.setDtNascimento(dtNascimento);
 			
 			int cdUsuario = bo.adicionarUsuario(usuario);
 			usuario.setCdUsuario(cdUsuario);
 			
 			System.out.println("Usuário Adicionado com Sucesso!");
 			System.out.println("Dados do Usuário");
-			System.out.println("Nome: " + usuario.getNome() + " " + usuario.getSobrenome());
-			System.out.println("Data de Nascimento: " + usuario.getDtNascimento());
+			System.out.println("Nome: " + usuario.getNome());
+			//System.out.println("Data de Nascimento: " + usuario.getDtNascimento());
 			System.out.println("Email: " + usuario.getEmail());
 			System.out.println("Senha: " + usuario.getPassword());
 			System.out.println("Código de Usuário: " + usuario.getCdUsuario());

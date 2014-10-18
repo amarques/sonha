@@ -26,8 +26,14 @@ public class TestarAdicionarSonho {
 			sonho.setCdCategoria(cdCategoria);
 			sonho.setSonhoRealizado(false);
 			sonho.setDtCriacao("");
-			bo.adicionarSonho(sonho);
+			int cdSonho = bo.adicionarSonho(sonho);
+			sonho.setCdSonho(cdSonho);
 			System.out.println("Sonho Adicionado com Sucesso!");
+			System.out.println("Código do Sonho: " + sonho.getCdSonho());
+			System.out.println("Título do Sonho: " + sonho.getTituloSonho());
+			System.out.println("Descrição do Sonho: " + sonho.getDescricaoSonho());
+			System.out.println("Data de Criação: " + sonho.getDtCriacao());
+			System.out.println("Código do Usuário: " + sonho.getCdUsuario());
 		} catch (SQLException | ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 		}

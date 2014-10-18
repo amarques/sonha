@@ -40,7 +40,4 @@ public class UsuarioBO {
 	public void fecharConexao() throws SQLException {
 		dao.fecharConexao();
 	}
-	
-	
-
 }

@@ -6,7 +6,7 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
 
   <!-- Meta tags & title /-->
@@ -52,25 +52,26 @@
 										
 						<%
 						UsuarioBEANS oUsuario = (UsuarioBEANS)session.getAttribute("userData");
-						
 						if (oUsuario == null) {
 							%>
 						<li><a href="novousuario.jsp">Inscreva-se</a></li>
 							<%
 						} else {
-							String nome = oUsuario.getNome();
-							String sobrenome = oUsuario.getSobrenome();
-							
-							if (sobrenome == null) {
-								sobrenome = "";
-							}
 							%>
-						<li><a href="editarperfil.jsp"><%=nome + " " + sobrenome %></a></li>
+							
+						<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>	
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
+						 
 						 <li><a href="sobre.html">Manifesto</a></li>
+						 
 						 <li><a href="sobre.html">Sobre</a></li>
+						 
 						</ul>
 					</div>
 				</div>
@@ -96,7 +97,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+						<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
@@ -138,12 +143,12 @@
 				<form name="Login" id="Login" action="LoginServlet" method="post" onSubmit="return valida(this);">
                     <div class="clear">
 						<input type="text" placeholder="login (e-mail)" name="email" tabindex="9" />
-						<span id="email" class="erro">Campo obrigatÃ³rio. Preencha o e-mail corretamente</span>
+						<span id="email" class="erro">Campo obrigatório. Preencha o e-mail corretamente</span>
 					</div>
 					<div class="clear">
 						<div>
 							<input type="password" placeholder="senha" name="password" tabindex="5"/>
-							<span id="senha" class="erro">Campo obrigatÃ³rio. *Minimo de 4 caracteres</span>
+							<span id="senha" class="erro">Campo obrigatório. *Minimo de 4 caracteres</span>
 						</div>
 					</div>
 					<input type="submit" class="cadBtn button2 fade3" value="entrar" tabindex="14"/>
@@ -151,9 +156,7 @@
                     <% if (request.getAttribute("loginInvalido") != null) { %>
 							<%=request.getAttribute("loginInvalido") %>
 						<% } %> 
-                    </p>
-                    
-                    
+                    </p> 
 				</form>
 				
 			</div>

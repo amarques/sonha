@@ -37,10 +37,6 @@
 
 
 <body>
-
-<!-- BEGIN CONTAINER ############################################### -->
-<div id="container" class="container">
-
 	<div id="fb-root"></div>
 
 <!-- NAVIGATION ############################################### -->
@@ -62,7 +58,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+							<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>							
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>
@@ -97,7 +97,11 @@
 							<%
 						} else {
 							%>
-						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + " " + oUsuario.getSobrenome() %></a></li>
+							<% String sobrenome = "";
+						if (oUsuario.getSobrenome() != null && !oUsuario.getSobrenome().equals("")) {
+							sobrenome = " " + oUsuario.getSobrenome();
+						} %>	
+						<li><a href="editarperfil.jsp"><%=oUsuario.getNome() + sobrenome %></a></li>
 							<%
 						}
 						%>

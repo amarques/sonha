@@ -78,7 +78,7 @@ public class AdicionarUsuarioServlet extends HttpServlet {
 						response);
 			}
 			else {
-				request.setAttribute("usuarioInvalido", "Usu√°rio Inv√°lido");
+				request.setAttribute("usuarioInvalido", "Usu·rio Inv·lido");
 				request.getRequestDispatcher("novousuario.jsp").forward(request,
 						response);
 			}
