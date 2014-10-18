@@ -50,12 +50,13 @@ public class CategoriaSonhoDAO {
 	}
 	
 	public CategoriaSonhoBEANS obterCategoria(int cdCategoria) throws SQLException {
-		String sql = "SELECT CD_CATG_SONHO, NM_CATG_SONHO, DS_CATG_SONHO FROM T_CATG_SONHO WHERE CD_CATG_SONHO = ?";
+		String sql = "SELECT CD_CATG_SONHO, NM_CATG_SONHO FROM T_CATG_SONHO WHERE CD_CATG_SONHO = ?";
 		CategoriaSonhoBEANS categoria = null;
-		PreparedStatement stmt = conexao.prepareStatement(sql);
-		ResultSet rs = stmt.executeQuery();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
 		try {
 			stmt = conexao.prepareStatement(sql);
+			stmt.setInt(1, cdCategoria);
 			rs = stmt.executeQuery();
 			
 			while (rs.next()) {

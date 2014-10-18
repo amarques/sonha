@@ -83,7 +83,7 @@ public class SonhoDAO {
 	}
 	
 	public List<SonhoBEANS> listarSonhos() throws SQLException {
-		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy'), "
+		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy') \"DT_CRIACAO\", "
 				+ "TITULO_SONHO, DESCRICAO_SONHO, CD_USUARIO, SONHO_REALIZADO, "
 				+ "CD_CATG_SONHO FROM T_SONHO";
 		List<SonhoBEANS> listaSonhos = new ArrayList<SonhoBEANS>();
@@ -118,7 +118,7 @@ public class SonhoDAO {
 	}
 	
 	public List<SonhoBEANS> listarSonhosPorUsuario(int cdUsuario) throws SQLException {
-		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy'), TITULO_SONHO, "
+		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy') \"DT_CRIACAO\", TITULO_SONHO, "
 				+ "DESCRICAO_SONHO, CD_USUARIO, SONHO_REALIZADO, CD_CATG_SONHO "
 				+ "FROM T_SONHO WHERE CD_USUARIO = ?";
 		List<SonhoBEANS> listaSonhos = new ArrayList<SonhoBEANS>();
@@ -154,7 +154,7 @@ public class SonhoDAO {
 	}
 	
 	public SonhoBEANS obterSonho(int cdSonho) throws SQLException {
-		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy'), "
+		String sql = "SELECT CD_SONHO, TO_CHAR(DT_CRIACAO, 'dd/MM/yyyy') \"DT_CRIACAO\", "
 				+ "TITULO_SONHO, DESCRICAO_SONHO, CD_USUARIO, "
 				+ "SONHO_REALIZADO, CD_CATG_SONHO FROM T_SONHO "
 				+ "WHERE CD_SONHO = ?";

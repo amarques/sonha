@@ -137,7 +137,7 @@ public class UsuarioDAO {
 	}
 
 	public UsuarioBEANS selecionarUsuario(int cdUsuario) throws SQLException {
-		String sql = "SELECT SOBRENOME_USUARIO, NOME_USUARIO, EMAIL, SENHA FROM T_USUARIO WHERE CD_USUARIO = ?";
+		String sql = "SELECT CD_USUARIO, SOBRENOME_USUARIO, NOME_USUARIO, EMAIL, SENHA FROM T_USUARIO WHERE CD_USUARIO = ?";
 		UsuarioBEANS usuario = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -152,6 +152,7 @@ public class UsuarioDAO {
 				usuario.setSobrenome(rs.getString("SOBRENOME_USUARIO"));
 				usuario.setEmail(rs.getString("EMAIL"));
 				usuario.setPassword(rs.getString("SENHA"));
+				usuario.setCdUsuario(rs.getInt("CD_USUARIO"));
 			}
 			rs.close();
 			stmt.close();

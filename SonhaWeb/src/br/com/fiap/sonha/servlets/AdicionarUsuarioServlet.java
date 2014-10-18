@@ -74,7 +74,7 @@ public class AdicionarUsuarioServlet extends HttpServlet {
 				request.setAttribute("listaCategorias", listaCategorias);
 				request.setAttribute("listaSonhos", listaSonhos);
 				
-				request.getRequestDispatcher("/feedsonhos.jsp").forward(request,
+				request.getRequestDispatcher("feedsonhos.jsp").forward(request,
 						response);
 			}
 			else {

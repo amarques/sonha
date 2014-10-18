@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.com.fiap.sonha.beans.CategoriaSonhoBEANS;
 import br.com.fiap.sonha.beans.SonhoBEANS;
 import br.com.fiap.sonha.beans.UsuarioBEANS;
+import br.com.fiap.sonha.bo.CategoriaSonhoBO;
 import br.com.fiap.sonha.bo.SonhoBO;
 
 /**
@@ -25,7 +27,6 @@ public class AdicionarSonhoServlet extends HttpServlet {
      */
     public AdicionarSonhoServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     @Override
@@ -33,9 +34,9 @@ public class AdicionarSonhoServlet extends HttpServlet {
     		throws ServletException, IOException {
     	try {
 			SonhoBO sonhoBO = new SonhoBO();
-			
+			CategoriaSonhoBO categoriaSonhoBO = new CategoriaSonhoBO();
 			SonhoBEANS sonho = new SonhoBEANS();
-			
+			CategoriaSonhoBEANS categoria = new CategoriaSonhoBEANS();
 			String tituloSonho = request.getParameter("dreamtitle");
 			String descricaoSonho = request.getParameter("dreamdetail");
 			int cdCategoria = Integer.parseInt(request.getParameter("dreamcategory"));
@@ -51,16 +52,28 @@ public class AdicionarSonhoServlet extends HttpServlet {
 			
 			int cdSonho = sonhoBO.adicionarSonho(sonho);
 			
-			sonho.setCdSonho(cdSonho);
+			sonho = sonhoBO.obterSonho(cdSonho);
+			sonhoBO.fecharConexao();
 			
+			categoria = categoriaSonhoBO.obterCategoria(cdCategoria);
+			categoriaSonhoBO.fecharConexao();
 			request.setAttribute("tituloSonho", sonho.getTituloSonho());
 			request.setAttribute("descricaoSonho", sonho.getDescricaoSonho());
-			
+			request.setAttribute("categoria", categoria.getNomeCategoria());
+			request.setAttribute("codigoSonho", sonho.getCdSonho());
+			request.setAttribute("dataCriacao", sonho.getDtCriacao());
+			if (sonho.isSonhoRealizado()) {
+				request.setAttribute("sonhoRealizado", "Sonho Realizado");
+			}
+			else {
+				request.setAttribute("sonhoRealizado", "Sonho a Realizar");
+			}
 			request.getRequestDispatcher("sonho.jsp").forward(request,
 					response);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			request.setAttribute("msgErro", e.getMessage());
+			request.getRequestDispatcher("erro.jsp").forward(request,
+					response);
 		} 
     }
 
