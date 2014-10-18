@@ -130,8 +130,8 @@
       	<div class="fade1 logo"><a href="index.jsp"><img src="img/logo.png" alt="Logo"></a></div>
       	
       	<!-- Title --> 
-        <h2 class="fade2">Onde seus sonhos podem colaborativamente
-	        			<br>se tornar realidade.</h2>  
+        <h2 class="fade2">O segredo do
+	        			<br>boné dourado.</h2>  
         
         <!-- Button--> 
         				<%
