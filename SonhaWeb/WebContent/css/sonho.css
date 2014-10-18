@@ -1,0 +1,325 @@
+#header {
+	background:none;
+} 
+
+#header .twelve.columns{margin-top:3%;}
+
+.fRight{
+	float:right;
+}
+
+.fLeft{
+	float:left;
+}
+
+.cadSonho{
+	background-color:#FFF;
+	clear:both;
+	overflow: hidden;
+	padding:4%;
+	border:1px solid #afafaf;
+}
+
+.cadBoxR{
+	width:36%;
+	text-align: right;
+}
+
+.cadBoxL{
+	width:60%;
+}
+
+.cadBox img{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.cadBox label{
+	margin:10px 0 0 0;
+	display: block;
+	color:#6f6f70;
+}
+
+.cadBox input[type="text"]{
+	width:100%;
+	color:#666666;
+	background:#ffffff;
+	border:1px solid #6f6f70;
+	padding:5px;
+	margin-top:10px;
+	font-family:"latolight",sans-serif;
+	height:35px;
+	font-size:16px;
+}
+
+.cadBox textarea {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 10px 5px;
+	width:100%;
+	color:#666666;
+	background:#ffffff;
+	border:1px solid #6f6f70;
+	margin-top:10px;
+	font-family:"latolight",sans-serif;
+	height:150px;
+	font-size:16px;
+}
+
+.subSonho{
+	clear:both;
+	overflow: hidden;
+	text-align: center;
+}
+
+input[type="file"]{
+	display: block !important;
+    width: 150px !important;
+    height: 22px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+}
+
+.btnImg{
+	position:relative;
+	color:#fff;
+	margin:0 0 10px 0;
+	padding:0;
+	cursor:default;
+}
+
+.btnImg p{
+	font-size:10px;
+	color:#fff;
+	position: absolute;
+	padding:3px 20px;
+}
+
+/*Sonho tela de descrição*/
+.infoSonho h4{
+	color:#333366;
+	font-size:30px;
+	margin-bottom:30px;
+}
+
+.infoSonho h5{
+	color:#040437;
+	font-size:15px;
+	margin-top:60px;
+}
+
+.infoSonho p{
+	color:#222;
+	font-size:16px;
+}
+
+.infoSonho .tags{
+	background:#ccc;
+	padding:10px;
+	margin-top:10px;
+	font-size:11px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin-bottom:40px;
+}
+
+/*Produtos*/
+.prods{
+	margin:50px 0;
+	background:#fff;
+	padding:20px 0;
+}
+
+.prods li:first-child{
+	border:none;
+}
+
+.prods li{
+	display:inline-block;
+	width:30%;
+	float:left;
+	border-left:1px solid #ccc;
+	padding:1%;
+}
+
+.prods li a{
+	text-decoration: none;
+}
+
+.prods li a img{
+	float:left;
+}
+
+.prods li a .text{
+	width:55%;
+	float:right;
+}
+
+.prods li a h3{
+	font-size:13px;
+	margin-bottom:10px;
+}
+
+.prods li a .text span{
+	font-size:10px;
+	color:#ccc;
+}
+
+.listSonho{
+	padding:0 4%;
+	margin-bottom:100px;
+	width:70%;
+	float:right;
+}
+
+.listSonho li{
+	border: 1px solid #edeaea;
+    display: inline-block;
+    float: left;
+    margin-bottom: 25px;
+    margin-right: 10px;
+    width: 48%
+}
+
+.listSonho li .img,.listSonho li .img img{
+	width:100%;
+	height:160px;
+}
+
+.listSonho li .title{
+	height:180px;
+	padding:16px;
+}
+
+.listSonho li .title .perfil{
+	height:130px;
+	padding:16px;
+}
+
+
+.listSonho li .title h4{
+	color:#3a3b3a;
+	font-size:16px;
+	font-weight:normal;
+	font-family:"latolight",sans-serif;
+	margin-bottom:5px;
+}
+
+.listSonho li .title p{
+	font-size:13px;	
+	color:#373031;
+}
+
+.listSonho li .title .status{
+	font-family:"latoregular",sans-serif;
+	color:#55aedd;
+}
+
+.listSonho li a{
+	text-decoration:none;
+}
+
+
+/*Botão de like*/
+.like {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.like .likeIcon{
+	background:url(../img/like.png) no-repeat bottom left;
+	width:20px;
+	height:17px;
+	display:block;
+	float:right;
+	margin:0 5px 0 0;
+}
+
+.like .actived{
+	background:url(../img/like.png) no-repeat top left;
+}
+
+.like p{
+	float:left;
+	text-align:left;
+	width:80%;
+	margin-left: 5px;
+	font-size:12px;
+}
+
+.like span{
+	font-size:12px;
+}
+
+.button2{
+	font-size:14px;
+	width:auto;
+	padding:5px 10px;
+	margin-left:10px;
+	margin-top:25px;
+}
+
+.excluir{
+	clear:both;
+	overflow:hidden;
+	margin:10px 0;
+}
+
+.excluir input{
+	font-size:10px;
+	padding:2px;
+}
+
+.imgBtn input{
+	font-size:10px;
+	padding:2px;
+	margin-top:0;
+	margin-bottom:10px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.buscar{
+	width:65%;
+	margin: 0 auto 30px;
+}
+
+.buscar input[type="text"],select{
+	width:70%;
+	color:#666666;
+	background:#ffffff;
+	border:1px solid #6f6f70;
+	padding:5px;
+	margin-top:0;
+	font-family:"latolight",sans-serif;
+	height:35px;
+	font-size:16px;
+	float:left;
+}
+
+select{
+	width:100%;
+}
+
+.buscar .button2{
+	margin:0 0 0 5px;
+	float:left
+}
+
+.categoria{
+	float:left;
+	width:20%;
+}
+
+.categoria a{
+	color:#373031;
+	display:block;
+	padding:0 10px;
+	margin-bottom:5px;
+}
+
+.categoria a:hover{
+	background:#e8e6e6;
+}
