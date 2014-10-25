@@ -9,8 +9,7 @@
 <head>
 
   <!-- Meta tags & title /-->
-  <!-- Eclipse git test - last configuration /-->
-  
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Sonha - Onde seus sonhos podem colaborativamente se tornar realidade</title>
