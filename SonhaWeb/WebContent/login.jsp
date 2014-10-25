@@ -145,7 +145,6 @@
                 <div class="faceLogin"></div>
                           
 				<form name="Login" id="Login" action="LoginServlet" method="post" onSubmit="return valida(this);">
-				
                     <div class="clear">
 						<input type="text" placeholder="login (e-mail)" name="email" tabindex="1" />
 						<span id="email" class="erro">Campo obrigatório. Preencha o e-mail corretamente</span>
@@ -162,7 +161,6 @@
 							<%=request.getAttribute("loginInvalido") %>
 						<% } %> 
                     </p> 
-                    
 				</form>
 				
 			</div>
