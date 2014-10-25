@@ -1,0 +1,465 @@
+@media screen and (max-width: 640px){
+	header{
+		position:fixed;
+		top:0;
+		z-index: 10;
+	}
+
+	header nav{
+		width:90%;
+	}
+
+	header, .main {
+		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		transition: all .25s linear;
+	}
+	
+	h2{
+		display: none;
+	}
+
+	section{
+		padding-top:100px;
+	}
+
+	.logo, .logo img{
+		left:30%;
+	}
+
+	.mobileMenu{
+		width:30px;
+		height:30px;
+		background:url(../images/mobile-menu.png) no-repeat;
+		float:left;
+		cursor:pointer;
+		display: block;
+	}
+		
+	.menu{
+		display:table;
+		position:fixed;
+		float:inherit;
+		background:#B452CD;
+		top:0;
+		left:0;
+		width:215px;
+		padding:20px 10px;
+		z-index: 9;
+		height:500px;
+		margin:0 !important;
+	}
+
+	.menu li{
+		display:block;
+		width:180px;
+		border-top:1px solid #fff;
+		padding:10px;
+	}
+
+	.menu li:first-child{
+		border-top:none;
+	}
+
+	.menu li a{
+		color:#fff !important;
+		display: block;
+	}
+
+	.menu li span{
+		display:none;
+	}
+
+	.menu {
+		transform: translateX(-235px);
+		transition: all .25s linear;
+	}
+
+	.menu-active menu {
+		transform: translateX(0);
+		transition: all .25s linear;
+	}
+	 
+	.menu-active header, 
+	.menu-active .main {
+		transform: translateX(220px);
+		transition: all .25s linear;
+	}
+
+	.cpBusca{
+		display:none;
+	}
+
+	/*Ajustes da Home*/
+	section>.home{
+		width:200px;
+		padding:0;
+		display:none;
+	}
+	
+	.boxBottom{
+		width:100%;
+		margin:0 auto 20px !important;
+		float:inherit;
+	}
+	.boxBottom .social li{
+		margin-right:5px !important;
+	}
+	
+	.instrucao li{
+		width:170px;
+		height:170px;
+		margin-bottom:10px;
+		padding:0;
+		border-color: #fff !important;
+		transform: none !important;
+		background-image:none;
+		display:none;
+	}
+	
+	.instrucao li .ca-icon{
+		color: #555;
+		font-size: 60px;
+		height:30px;
+		width:30px;
+		margin:auto;
+		text-align: center;
+		display: block !important;
+	}
+	
+	.instrucao li .ca-icon img,.instrucao li:hover .ca-icon img{
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		top: 10px;
+		right: 34%;
+		left:-25px;
+	}
+	
+	.instrucao li .ca-main{
+		display: none !important;
+	}
+	
+	.instrucao li .ca-sub{
+		margin-top:30px;
+		opacity: 0.8;
+	}
+	
+	.instrucao li:nth-child(1){
+    	background-color:#e3e7f9;
+		background-image:none;
+	}
+	
+	.instrucao li:nth-child(2){
+		background-color:#e3e7f9;
+	}
+	
+	.instrucao li:nth-child(3){
+		background-color:#e3e7f9;
+	}
+	
+	.instrucao li:nth-child(4){
+		background-color:#e3e7f9;
+	}
+
+	/*Ajuste na página de cadastro*/
+	.cadBox{
+		width:80%;
+		padding:20px;
+	}
+
+	.half{
+		width:100% !important;
+	}
+
+	.imgCad{
+		float:inherit;
+		margin:0 auto;
+	}
+
+	.btnImg{
+		float:inherit;
+		margin:20px auto;
+		display: block;
+		text-align: center;
+	}
+
+	.infoSonho h5{
+		margin-top:20px;
+	}
+
+	.infoSonho .tags{
+		margin-bottom:20px;
+	}
+
+	.infoSonho h4{
+		font-size:25px;
+	}
+
+	.prods li:first-child{
+		border:none;
+	}
+	
+	.prods li{
+		width:80%;
+		border-top:1px dotted #ccc;
+		padding:3%;
+	}
+
+	.prods li a .text{
+		width:55%;
+	}
+
+	/*Lista de sonhos*/
+	.listSonho li{
+		width:100%;
+	}
+
+	.checkSex{
+	    width: 100%;
+	}
+}
+@media screen and (min-width: 641px) and (max-width: 900px){
+	.menu{
+		display:none;
+	}
+
+	header{
+		position:fixed;
+		top:0;
+		z-index: 10;
+	}
+	
+	header nav{
+		width:90%;
+	}
+
+	header, .main {
+		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		transition: all .25s linear;
+	}
+
+	.mobileMenu{
+		width:30px;
+		height:30px;
+		background:url(../images/mobile-menu.png) no-repeat;
+		float:left;
+		cursor:pointer;
+	}
+
+	.logo, .logo img{
+		left:30%;
+	}
+	
+	.menu{
+		display:table;
+		position:fixed;
+		float:inherit;
+		background:#B452CD;
+		top:0;
+		left:0;
+		width:215px;
+		padding:20px 10px;
+		z-index: 9;
+		height:500px;
+		margin:0 !important;
+		box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.1);
+		-webkit-box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: inset -5px -10px 10px 0 rgba(0,0,0,.1);
+	}
+
+	.menu li{
+		display:block;
+		width:180px;
+		border-top:1px solid #fff;
+		padding:10px;
+	}
+
+	.menu li:first-child{
+		border-top:none;
+	}
+
+	.menu li a{
+		color:#fff !important;
+		display: block;
+	}
+
+	.menu li span{
+		display:none;
+	}
+
+	.menu {
+		transform: translateX(-235px);
+		transition: all .25s linear;
+	}
+
+	.menu-active menu {
+		transform: translateX(0);
+		transition: all .25s linear;
+	}
+	 
+	.menu-active header, 
+	.menu-active .main {
+		transform: translateX(220px);
+		transition: all .25s linear;
+	}
+
+	.mobileMenu{
+		display:block;
+	}
+
+	/*Ajustes da Home*/
+	section {
+		padding: 0;
+		width: 80%;
+	}
+	
+	.boxBottom{
+		width:100%;
+		margin:0 auto 20px !important;
+		float:inherit;
+	}
+
+	.instrucao{
+		margin-top: 50px;
+	}
+
+	.instrucao li{
+		width:170px;
+		height:170px;
+		margin-bottom:10px;
+		padding:0;
+		border-color: #fff !important;
+		transform: none !important;
+		background-image:none;
+	}
+	
+	.instrucao li .ca-icon{
+		color: #555;
+		font-size: 60px;
+		height:30px;
+		width:30px;
+		margin:auto;
+		text-align: center;
+		display: block !important;
+	}
+	
+	.instrucao li .ca-icon img,.instrucao li:hover .ca-icon img{
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		top: 10px;
+		right: 34%;
+		left:-25px;
+	}
+	
+	.instrucao li .ca-main{
+		display: none !important;
+	}
+	
+	.instrucao li .ca-sub{
+		margin-top:30px;
+		opacity: 0.8;
+	}
+	
+	.instrucao li:nth-child(1){
+    	background-color:#e3e7f9;
+		background-image:none;
+		float:left;
+	}
+	
+	.instrucao li:nth-child(2){
+		background-color:#e3e7f9;
+		float:right;
+	}
+	
+	.instrucao li:nth-child(3){
+		background-color:#e3e7f9;
+		float:left;
+	}
+	
+	.instrucao li:nth-child(4){
+		background-color:#e3e7f9;
+		float:right;
+	}
+
+	/*Ajuste na página de cadastro*/
+	.cadBox{
+		width:100%;
+	}
+
+	.prods li:first-child{
+		border:none;
+	}
+	
+	.prods li{
+		width:80%;
+		border-top:1px dotted #ccc;
+		padding:3%;
+	}
+
+	.prods li a .text{
+		width:65%;
+	}
+
+	.cadSonho{
+		padding:8%;
+	}
+
+	/*Lista de sonhos*/
+	.listSonho li{
+		width:100%;
+	}
+}
+@media screen and (min-width: 901px) and (max-width: 1024px){
+	header nav{
+		width:80%;
+	}
+	
+	/*Ajustes da Home*/
+	.boxBottom{
+		width:45%;
+		margin-left:10%;
+	}
+	.boxBottom:nth-child(3){
+		width:100%;
+		margin-left:0;
+		height:165px;
+		margin-top:20px;
+	}
+	.instrucao li:hover .ca-icon img{
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		top: 10px;
+		right: 34%;
+		left:-25px;
+	}
+	.instrucao li .ca-sub{
+		margin-top:30px;
+	}
+
+	.instrucao li .ca-main{
+		margin-top:-18px;
+	}
+
+	.instrucao li .ca-sub{
+		font-size:15px;
+	}
+	
+	/*Cadastro de Sonhos*/
+	.cadBox img{
+		width:100%;
+	}
+
+	.prods li a .text{
+		width:95%;
+	}
+
+	/*Lista de sonhos*/
+	.listSonho li{
+		width:47%;
+	}
+
+}

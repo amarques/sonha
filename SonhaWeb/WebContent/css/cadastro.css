@@ -1,0 +1,167 @@
+#header{
+	background:none;	
+}
+
+/*Padrão dos botões*/
+input[type="text"]{
+	width:100%;
+	color:#666666;
+	background:#ffffff;
+	border:1px solid #6f6f70;
+	padding:5px;
+	margin-top:10px;
+	font-family:"latolight",sans-serif;
+	height:35px;
+	font-size:16px;
+}
+
+input[type="password"]{
+	width:100%;
+	color:#666666;
+	background:#ffffff;
+	border:1px solid #6f6f70;
+	padding:5px;
+	margin-top:10px;
+	font-family:"latolight",sans-serif;
+	height:35px;
+	font-size:16px;
+}
+
+.excluir .btnExcluir{
+	text-decoration:none;
+	display:inline-block;
+	float: right;
+    font-size: 9px;
+    padding: 4px 16px;
+    margin:10px 0 10px 10px;
+}
+
+.btnPadrao p{
+	cursor:pointer;
+}
+
+.cadBox{
+	background:url(../img/debut_dark.png) #FFF repeat;
+	width:50%;
+	clear:both;
+	overflow:hidden;
+	padding:40px;
+	margin:0 auto 100px;
+}
+
+.cadBox h2{
+	text-align:center;
+}
+
+.half{
+	width:45% !important;
+}
+
+.fLeft{
+	float:left;
+}
+
+.fRight{
+	float:right;
+}
+
+.clear{
+	clear:both;
+	padding:0;
+}
+
+.erro{
+	display: none;
+	clear: both;
+	color:red;
+	font-size:10px;
+}
+
+.imgCad{
+	height:100px;
+	width:100px;
+	overflow: hidden;
+	margin:0 auto;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+}
+
+.btnImg{
+	position:relative;
+	color:#fff;
+	margin:38px 18px 10px;
+	padding:0;
+	cursor:default;
+}
+
+.btnImg p{
+	font-size:10px;
+	color:#fff;
+	position: absolute;
+	padding:3px 20px;
+}
+
+.checkSex{
+	font-size: 13px;
+    padding-top: 20px;
+    width: 100%;
+    color:#6f6f70;
+	font-family:"latolight",sans-serif;
+}
+
+.button2{
+	font-size:14px;
+	width:auto;
+	padding:5px 10px;
+	margin-left:10px;
+	margin-top:25px;
+}
+
+.excluir{
+	clear:both;
+	overflow:hidden;
+	margin:10px 0;
+}
+
+.excluir input{
+	font-size:10px;
+	padding:2px;
+}
+
+.imgBtn{
+	width:100%;
+	text-align:center;
+}
+
+.imgBtn input{
+	font-size:10px;
+	padding:2px;
+	margin:0;
+}
+
+.cadBtn{
+	width:100%;
+	margin-left:0;
+}
+
+.logo img{
+	width:150px;
+	margin: 0 auto; 
+	text-align: center; display: block;
+}
+
+.msg{
+	color:#ccc;
+	font-size:10px;
+	text-align:center;
+	display:block;
+	margin-top:10px;
+}
+
+.faceLogin{
+	background:url(../img/btn-facebook.jpg) no-repeat;
+	margin:25px auto;
+	width:165px;
+	height:22px;
+}
